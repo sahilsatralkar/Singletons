@@ -9,7 +9,7 @@ class Singleton {
     private var number = 1
     func printSomething() {
         number += 1
-        print("This is printSomething function = \(number)")
+        print("This is printSomething = \(number)")
     }
 }
 
