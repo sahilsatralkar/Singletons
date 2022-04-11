@@ -1,3 +1,7 @@
+//
+// Copyright (c) 2022 Sahil Satralkar. All rights reserved.
+//
+
 import UIKit
 
 class Singleton {
