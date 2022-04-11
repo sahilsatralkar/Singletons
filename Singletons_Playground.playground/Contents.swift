@@ -26,11 +26,18 @@ singletonObject2.incrementParentCount()
 
 class SingletionSubClass : Singleton {
     
-    var childCounter = 0
+    static let sharedSubClassObject = SingletionSubClass()
+    
+    var childCounter : Int
+        
+    override init () {
+        self.childCounter = 0
+        super.init()
+    }
     
     func incrementChildCounter() {
         childCounter += 1
-        print("Value of child Counter is \(childCounter)")
+        print("Value of childCounter is \(childCounter)")
     }
     
     override func incrementParentCount() {
@@ -39,7 +46,7 @@ class SingletionSubClass : Singleton {
     }
 }
 
-let childSingletonObj1 = SingletionSubClass()
+let childSingletonObj1 = SingletionSubClass.sharedSubClassObject
 childSingletonObj1.incrementChildCounter()
 childSingletonObj1.incrementParentCount()
 childSingletonObj1.incrementParentCount()
