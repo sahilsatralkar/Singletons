@@ -4,7 +4,11 @@ class Singleton {
     
     static let shared = Singleton()
     
-    var parentCounter = 0
+    var parentCounter :Int
+    
+    init() {
+        self.parentCounter = 0
+    }
     
     func incrementParentCount() {
         parentCounter += 1
